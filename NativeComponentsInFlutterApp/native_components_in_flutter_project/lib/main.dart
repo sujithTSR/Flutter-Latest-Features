@@ -36,8 +36,10 @@ class _MyHomePageState extends State<MyHomePage> {
     try {
       final String result = await platform.invokeMethod('helloFromNativeCode');
       response = result;
+      print(response);
     } on PlatformException catch (e) {
       response = "Failed to Invoke: '${e.message}'.";
+      print(response);
     }
     setState(() {
       _response = response;
@@ -53,17 +55,21 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<dynamic> methodHandler(MethodCall methodCall) async {
+    print(methodCall.method);
     switch (methodCall.method) {
       case 'fromAndroid':
         setState(() {
+          print(methodCall.method + " Setting state");
           _response = "Back to Flutter";
         });
-        return 'some string';
-      case 'bar':
-        return 123.0;
-      default:
-      // todo - throw not implemented
+
     }
+  }
+
+
+  @override
+  void dispose() {
+    print("disposing");
   }
 
   @override
