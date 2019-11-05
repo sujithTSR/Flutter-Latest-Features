@@ -1,11 +1,28 @@
-Mission Flutter: 
-I will be trying to implement latest features and functionalitites of Flutter. In case if anybody is interested feel free to contribute. 
+##Mission [Flutter](https://flutter.dev/)
+I will be trying to implement examples for latest features and functionalitites of Flutter. As there are (very less)/(no solid) examples for flutter implementations, I am commiting the once which I am learning.
 
-1. Native Android Communications
-2. Architectural Patterns in Flutter
+
+##Topics
+1. FlutterAttach
+
+2. FlutterToExistingNative (TODO)
+
+3. NativeComponentsInFlutterApp 
+
+4. Architectural Patterns in Flutter (TODO)
+
    a. BLoC
+
    b. Keep it Simple, State
 
+   c. Providers
 
-TODO: 
-1. README update for all the sub projects and include a detailed documentation. 
+
+##Note
+Versions Used
+
+Flutter 1.9.1+hotfix.6
+
+Tools • Dart 2.5.0
+
+Native Integration examples are with Android.

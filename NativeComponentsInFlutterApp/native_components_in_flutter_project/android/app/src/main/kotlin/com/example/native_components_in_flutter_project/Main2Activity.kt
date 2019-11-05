@@ -1,6 +1,5 @@
 package com.example.native_components_in_flutter_project
 
-import android.R
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
