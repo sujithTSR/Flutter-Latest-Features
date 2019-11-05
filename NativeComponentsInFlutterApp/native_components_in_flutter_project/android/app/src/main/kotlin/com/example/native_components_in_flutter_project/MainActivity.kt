@@ -2,8 +2,6 @@ package com.example.native_components_in_flutter_project
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
 import io.flutter.app.FlutterActivity
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugins.GeneratedPluginRegistrant
