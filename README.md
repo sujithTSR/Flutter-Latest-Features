@@ -1,8 +1,8 @@
 Mission Flutter: 
-I will be trying out latest features and functionalitites of Flutter. In case if anybody is interested feel free to contribute. 
+I will be trying to implement latest features and functionalitites of Flutter. In case if anybody is interested feel free to contribute. 
 
-1. Trying out Flutter - Native Android Communications
-2. Try out - Architectural Patterns in Flutter
+1. Native Android Communications
+2. Architectural Patterns in Flutter
    a. BLoC
    b. Keep it Simple, State
 
