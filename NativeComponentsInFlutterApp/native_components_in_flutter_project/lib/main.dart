@@ -4,15 +4,11 @@ import 'package:flutter/services.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Counter App Home Page'),
     );
   }
 }
@@ -29,9 +25,11 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+    String _response = "Waiting for the response from Android Code.!";
+
   static const platform = const MethodChannel('flutter.native.within/channel');
-  String _response = "Waiting for the response from Native Code.!";
   Future _invokeAndroid() async {
+//    Smoke-Test to check if the channel communication is working fine with multiple devices.
     String response = "";
     try {
       final String result = await platform.invokeMethod('helloFromNativeCode');
@@ -45,9 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _response = response;
     });
   }
-  
   _MyHomePageState();
-
 
   @override
   void initState() {
@@ -62,14 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
           print(methodCall.method + " Setting state");
           _response = "Back to Flutter";
         });
-
     }
-  }
-
-
-  @override
-  void dispose() {
-    print("disposing");
   }
 
   @override
@@ -79,18 +68,18 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-
         child: Column(
-
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-                '$_response'
+              '$_response',
+              key: Key('__response'),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        key: Key('__button'),
         onPressed: _invokeAndroid,
         tooltip: 'Increment',
         child: Icon(Icons.add),

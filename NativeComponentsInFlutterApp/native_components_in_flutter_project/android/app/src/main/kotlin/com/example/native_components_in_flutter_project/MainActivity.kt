@@ -14,9 +14,8 @@ class MainActivity: FlutterActivity() {
       if (call.method == "helloFromNativeCode") {
         val greetings = helloFromNativeCode()
         result.success(greetings)
-        intent = Intent(this, Main2Activity::class.java)
-        startActivity(intent)
-
+//        intent = Intent(this, Main2Activity::class.java)
+//        startActivity(intent)
       }
     }
 
