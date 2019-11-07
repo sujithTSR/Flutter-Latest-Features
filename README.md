@@ -1,5 +1,5 @@
 # Mission [Flutter](https://flutter.dev/)
-I will be trying to implement examples for latest features and functionalitites of Flutter. As there are (very less)/(no solid) examples for flutter implementations, I am commiting the once which I am learning.
+I will be trying to implement examples for latest features and functionalitites of Flutter. As there are (very less)/(no solid) examples for flutter implementations, I am sharing the one's which I am learning.
 
 
 ## Topics
