@@ -1,0 +1,18 @@
+version = "1"
+
+apply plugin: 'com.android.library'
+
+
+android{
+    sourceSets {
+        main {
+            manifest.srcFile 'main/AndroidManifest.xml'
+        }
+    }
+    compileSdkVersion 29
+
+}
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api project(':testlib')
+}
